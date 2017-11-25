@@ -1,6 +1,7 @@
 package me.albertomendez.comunicacionactivityfragment
 
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, MainFragment.OnN
         MainActivityController.addFragment(supportFragmentManager, contenedorFragment, mainFrag)
 
         fab.setOnClickListener { view ->
-            MainActivityController.actualizarNumeroAleatorio(mainFrag)
+            MainActivityController.actualizarNumeroAleatorio(mainFrag, etMin.text.toString().toInt(), etMax.text.toString().toInt())
         }
     }
 
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, MainFragment.OnN
         MainActivityController.clickBoton(this, view)
     }
 
-    override fun actualizado(numero: Double) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun actualizado(numero: Int) {
+        Snackbar.make(fab, "$numero", Snackbar.LENGTH_LONG).show()
     }
 }

@@ -42,14 +42,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.45"
-            android:hint="@string/limite_inferior" />
+            android:hint="@string/limite_inferior"
+            android:inputType="number"/>
 
         <EditText
             android:id="@+id/etMax"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.45"
-            android:hint="@string/limite_superior" />
+            android:hint="@string/limite_superior"
+            android:inputType="number"/>
 
     </LinearLayout>
 

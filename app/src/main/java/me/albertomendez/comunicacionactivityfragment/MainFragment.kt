@@ -23,11 +23,11 @@ class MainFragment : Fragment() {
     }
 
     interface OnNumeroAleatorio {
-        fun actualizado(numero: Double)
+        fun actualizado(numero: Int)
     }
 
     fun actualizarNumero(min: Int, max: Int) {
-        val numeroAleatorio: Double = Aleatorio.generar(min, max)
+        val numeroAleatorio: Int = Aleatorio.generar(min, max)
         tvNumeroAleatorio.text = "$numeroAleatorio"
         onNumeroAleatorio?.actualizado(numeroAleatorio)
     }

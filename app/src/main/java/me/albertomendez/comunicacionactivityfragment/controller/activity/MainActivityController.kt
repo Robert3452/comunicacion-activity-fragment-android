@@ -25,10 +25,11 @@ class MainActivityController {
         fun clickBoton(contexto: Context, vista: View, contenedorVista: View? = null) {
         }
 
-        fun actualizarNumeroAleatorio(fragment: MainFragment) {
-            val etNumeroMin = etMin as EditText
-            val etNumeroMax = etMax as EditText
-            fragment.actualizarNumero(etNumeroMin.text.toString().toInt(), etNumeroMax.toString().toInt())
+        fun actualizarNumeroAleatorio(fragment: MainFragment, min: Int, max: Int) {
+            if(min > max){
+                return
+            }
+            fragment.actualizarNumero(min, max)
         }
     }
 }
