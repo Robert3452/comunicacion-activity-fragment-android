@@ -43,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.45"
             android:hint="@string/limite_inferior"
+            android:text="@string/min"
             android:inputType="number"/>
 
         <EditText
@@ -51,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.45"
             android:hint="@string/limite_superior"
+            android:text="@string/max"
             android:inputType="number"/>
 
     </LinearLayout>

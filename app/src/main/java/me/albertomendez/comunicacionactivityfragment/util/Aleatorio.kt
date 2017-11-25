@@ -7,6 +7,6 @@ import java.util.*
  */
 class Aleatorio {
     companion object {
-        fun generar(min: Int, max: Int): Int =  Random().nextInt(min + ((max - min) + 1))
+        fun generar(min: Int, max: Int): Int =  Random().nextInt((max - min + 1)) + min
     }
 }
