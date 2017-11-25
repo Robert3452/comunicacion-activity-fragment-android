@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="me.albertomendez.comunicacionactivityfragment.MainFragment">
+    tools:context="me.albertomendez.comunicacionactivityfragment.MainFragment"
+    android:background="@color/colorAccentSemiTransparente">
 
     <TextView
         android:layout_width="match_parent"

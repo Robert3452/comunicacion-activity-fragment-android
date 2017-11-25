@@ -1,4 +1,4 @@
-package me.albertomendez.comunicacionactivityfragment.controller
+package me.albertomendez.comunicacionactivityfragment.controller.fragment
 
 import java.util.*
 

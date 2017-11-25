@@ -1,7 +1,7 @@
 package me.albertomendez.comunicacionactivityfragment
 
 import junit.framework.Assert
-import me.albertomendez.comunicacionactivityfragment.controller.MainFragmentController
+import me.albertomendez.comunicacionactivityfragment.controller.fragment.MainFragmentController
 import org.junit.Test
 
 /**
