@@ -37,12 +37,15 @@ class MainActivity : AppCompatActivity(), MainFragment.OnNumeroAleatorio {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                Snackbar.make(fab, getString(R.string.action_settings), Snackbar.LENGTH_LONG).show()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
     override fun actualizado(numero: Int) {
-        Snackbar.make(fab, "$numero", Snackbar.LENGTH_LONG).show()
+        Snackbar.make(fab, getString(R.string.numero_aleatorio_actualizado, numero.toString()), Snackbar.LENGTH_LONG).show()
     }
 }
