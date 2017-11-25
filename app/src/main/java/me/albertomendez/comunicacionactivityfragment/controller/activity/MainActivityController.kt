@@ -22,14 +22,18 @@ class MainActivityController {
             supportFragmentManager.beginTransaction().add(contenedor.id, fragment).commit()
         }
 
-        fun clickBoton(contexto: Context, vista: View, contenedorVista: View? = null) {
+        fun actualizarNumeroAleatorio(fragment: MainFragment, etMin: EditText, etMax: EditText) {
+            val min = comprobarNumeroEntrada(etMin)
+            val max = comprobarNumeroEntrada(etMax)
+            if (min < max) {
+                fragment.actualizarNumero(min, max)
+            } else {
+                throw Exception()
+            }
         }
 
-        fun actualizarNumeroAleatorio(fragment: MainFragment, min: Int, max: Int) {
-            if(min > max){
-                return
-            }
-            fragment.actualizarNumero(min, max)
+        fun comprobarNumeroEntrada(et: EditText): Int {
+            return if (et.text.toString().isNullOrEmpty()) 0 else et.text.toString().toInt()
         }
     }
 }

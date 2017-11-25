@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import me.albertomendez.comunicacionactivityfragment.controller.activity.MainActivityController
 
-class MainActivity : AppCompatActivity(), View.OnClickListener, MainFragment.OnNumeroAleatorio {
+class MainActivity : AppCompatActivity(), MainFragment.OnNumeroAleatorio {
 
     val mainFrag: MainFragment = MainFragment()
 
@@ -22,7 +22,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, MainFragment.OnN
         MainActivityController.addFragment(supportFragmentManager, contenedorFragment, mainFrag)
 
         fab.setOnClickListener { view ->
-            MainActivityController.actualizarNumeroAleatorio(mainFrag, etMin.text.toString().toInt(), etMax.text.toString().toInt())
+            try{
+                MainActivityController.actualizarNumeroAleatorio(mainFrag, etMin, etMax)
+            }catch (e: Exception){
+                Snackbar.make(fab, getString(R.string.error_limites), Snackbar.LENGTH_LONG).show()
+            }
         }
     }
 
@@ -36,10 +40,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, MainFragment.OnN
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    override fun onClick(view: View) {
-        MainActivityController.clickBoton(this, view)
     }
 
     override fun actualizado(numero: Int) {

@@ -10,7 +10,7 @@ import org.junit.Test
  */
 class FragmentControllerTest {
     @Test
-    fun testGetRandomNumber() {
+    fun testGenerarNumeroAleatorio() {
         val numeroAleatorio = Aleatorio.generar(1, 100)
         Assert.assertTrue("El número aleatorio está entre 1 y 100", numeroAleatorio in 1..100)
     }
