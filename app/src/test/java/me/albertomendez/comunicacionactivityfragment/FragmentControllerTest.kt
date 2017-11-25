@@ -11,6 +11,6 @@ class FragmentControllerTest {
     @Test
     fun testGetRandomNumber() {
         val numeroAleatorio = MainFragmentController.getNumeroAleatorio(1, 100)
-        Assert.assertTrue("Número está entre 1 y 100", numeroAleatorio in 1..100)
+        Assert.assertTrue("El número aleatorio está entre 1 y 100", numeroAleatorio in 1..100)
     }
 }
