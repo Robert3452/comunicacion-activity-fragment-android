@@ -8,6 +8,6 @@ import java.util.*
 
 class MainFragmentController {
     companion object {
-        fun getNumeroAleatorio(min: Int, max: Int): Double = min + (max - min) * Random().nextDouble()
+
     }
 }
